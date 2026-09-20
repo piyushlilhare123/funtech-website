@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>FunTech Club | MITS Gwalior</title>
+  <meta name="description" content="FunTech is the tech & fun club of Madhav Institute of Technology & Science, Gwalior. Workshops, game jams, robotics and carnival games.">
+  <meta name="theme-color" content="#07070D">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Loader -->
+  <div class="loader" id="loader" role="status" aria-live="polite">
+    <p class="loader-text">Powering up</p>
+    <div class="loader-bar"><i id="loaderFill"></i></div>
+  </div>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"><i id="progressFill"></i></div>
+
+  <!-- Navbar -->
+  <header class="nav" id="nav">
+    <a class="brand" href="#top" aria-label="FunTech Club, back to top">
+      <span class="brand-mark" id="dock"></span>
+      <span class="brand-name">Funtech Club</span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#activities">Activities</a>
+      <a href="#events">Events</a>
+      <a class="pill" href="#join">Join Us</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Logo that flies from hero center into the navbar -->
+  <a class="fly-logo" id="flyLogo" href="#top" aria-label="FunTech logo">
+    <img src="assets/logo.png" alt="FunTech logo" width="512" height="512">
+  </a>
+
+  <!-- Sticky corner logo: stays fixed bottom-right across the whole site -->
+  <a class="site-logo-fixed" href="#top" aria-label="Back to top">
+    <img src="assets/logo.png" alt="FunTech logo" width="128" height="128">
+  </a>
+
+  <!-- Mobile menu -->
+  <div class="menu" id="menu" aria-hidden="true">
+    <a href="#about">About</a>
+    <a href="#activities">Activities</a>
+    <a href="#events">Events</a>
+    <a href="#join" class="pill">Join Us</a>
+  </div>
+
+  <main>
+    <!-- HERO: pinned, scroll-scrubbed circuit board -->
+    <section class="hero" id="top" aria-label="Welcome to FunTech Club">
+      <div class="stage">
+        <canvas class="cv" aria-hidden="true"></canvas>
+        <div class="vig"></div>
+
+        <div class="beat" id="bHint">
+          <p class="hint">Scroll to power on <span aria-hidden="true">↓</span></p>
+        </div>
+
+        <div class="beat beat-up" id="bWelcome">
+          <h1 class="display">Welcome to FunTech Club</h1>
+        </div>
+
+        <div class="beat beat-down" id="bTag">
+          <p class="tagline">THE FUTURE OF FUN &amp; TECH</p>
+        </div>
+
+        <div class="beat" id="bWhere">
+          <h2 class="display wm">
+            <span class="pair"><span class="big">Where</span> <span class="small s-purple">CREATIVITY</span></span>
+            <span class="pair"><span class="big">Meets</span> <span class="small s-cyan">TECHNOLOGY</span></span>
+          </h2>
+        </div>
+
+        <div class="beat" id="bPara">
+          <p class="para" id="para">
+            <span class="sent">FunTech Club is a vibrant community of tech enthusiasts, innovators, and learners who explore the exciting world of coding, design, robotics, and digital fun.</span>
+            <span class="sent">We organize hands-on workshops, tech challenges, and fun learning sessions to turn ideas into real-world creations.</span>
+            <span class="sent">Join us to learn, build, and enjoy technology in the most exciting way possible!</span>
+          </p>
+        </div>
+
+        <div class="beat" id="bCta">
+          <a class="cta" href="#join">Register Now &amp; Start Building</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about">
+      <div class="about-bg" aria-hidden="true">
+        <span class="blob b1" data-parallax="0.12"></span>
+        <span class="blob b2" data-parallax="-0.08"></span>
+        <div class="particles" id="particles"></div>
+      </div>
+      <div class="about-inner">
+        <h2 class="about-title" data-reveal>One club.<br><span class="grad-text">Endless innovation.</span></h2>
+        <p class="about-sub" data-reveal>Code it, Build it, Play it ,  All at  Funtech club  MITS Gwalior.</p>
+      </div>
+    </section>
+
+    <!-- FLAGSHIP EVENTS: second pinned, scroll-scrubbed clip -->
+    <section class="hero clip" id="flagship" aria-label="Flagship events">
+      <div class="stage">
+        <canvas class="cv" aria-hidden="true"></canvas>
+        <div class="vig"></div>
+
+        <div class="beat beat-up" id="fTitle">
+          <h2 class="display">Flagship events</h2>
+        </div>
+        <div class="beat beat-down" id="fLead">
+          <p class="flead">FUNTECH presents Carnival Games<br>🎮✨ Step into the ultimate retro vibe at ARUNYA 2026! ✨🎮</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TREASURE MAP: third pinned, scroll-scrubbed clip -->
+    <section class="hero clip" id="treasure" aria-label="Treasure hunt">
+      <div class="stage">
+        <canvas class="cv" aria-hidden="true"></canvas>
+        <div class="vig"></div>
+
+        <div class="beat beat-up" id="tTitle">
+           <h2 class="display">🚀 INNOVATION BLITZ 3.0 🚀</h2>
+          <h2 class="display">Chase the Treasure</h2>
+
+          <h2 >Follow the map, crack the clues . Every hunt hides a new adventure.</h2>
+        </div>
+       
+
+        <div class="beat beat-down" id="tLead">
+         
+        </div>
+      </div>
+    </section>
+
+    <!-- ACTIVITIES -->
+    <section class="section" id="activities">
+      <div class="wrap">
+        <h2 class="h2 center" data-reveal>Our Core Activities</h2>
+        <div class="cards">
+          <article class="card" style="--a:#B24BF3" data-reveal data-tilt>
+            <span class="card-icon" aria-hidden="true">💻</span>
+            <h3>Coding Workshops</h3>
+            <p>Dive deep into languages like Python, JavaScript, and advanced topics like AI/ML. Perfect for beginners and seasoned coders.</p>
+          </article>
+          <article class="card" style="--a:#E8B4F5" data-reveal data-tilt>
+            <span class="card-icon" aria-hidden="true">🎮</span>
+            <h3>Game Jams &amp; Design</h3>
+            <p>Team up to design, develop, and launch a working game in a weekend! Learn rapid prototyping and collaboration.</p>
+          </article>
+          <article class="card" style="--a:#3ED8E8" data-reveal data-tilt>
+            <span class="card-icon" aria-hidden="true">🤖</span>
+            <h3>Robotics &amp; Hardware</h3>
+            <p>Get hands-on with microcontrollers, IoT devices, and build functional robots and smart gadgets.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PERKS -->
+    <section class="section" id="perks">
+      <div class="wrap">
+        <h2 class="h2 center upper" data-reveal>Perks of Joining</h2>
+        <div class="perks">
+          <article class="perk" style="--a:#B24BF3" data-reveal data-tilt>
+            <h3>Volunteer Opportunity <span class="perk-icon" aria-hidden="true">🤝</span></h3>
+            <p>Gain real experience organizing epic events, from workshops to treasure hunts.</p>
+            <p>Earn a Volunteer Certificate to prove your awesomeness.</p>
+          </article>
+          <article class="perk" style="--a:#3ED8E8" data-reveal data-tilt>
+            <h3>Level Up Your Future <span class="perk-icon" aria-hidden="true">🚀</span></h3>
+            <p>Be the first to know about exclusive opportunities (limited spots!)</p>
+            <p>Shine brighter with your volunteer certificate <span aria-hidden="true">✨</span></p>
+          </article>
+          <article class="perk" style="--a:#B24BF3" data-reveal data-tilt>
+            <h3>Workshops &amp; Seminars <span class="perk-icon" aria-hidden="true">🎓</span></h3>
+            <p>Ditch the registration fees! Get free access to all our amazing workshops and seminars.</p>
+          </article>
+          <article class="perk" style="--a:#3ED8E8" data-reveal data-tilt>
+            <h3>Brain Teasers &amp; Prizes <span class="perk-icon" aria-hidden="true">🏆</span></h3>
+            <p>Test your knowledge with our online quiz series — it's BRAIN BYTE!</p>
+            <p>Win cool prizes and hardcopy certificates to show off your skills.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVENTS -->
+    <section class="section" id="events">
+      <div class="wrap">
+        <h2 class="h2" data-reveal>Event highlights</h2>
+
+        <div class="events">
+          <article class="event" data-reveal>
+            <div class="poster" style="--poster:url('assets/posters/brain-byte.webp')">
+              <img src="assets/posters/brain-byte.webp" alt="Brain Byte 6.0 poster" loading="lazy" data-parallax-img>
+            </div>
+            
+          </article>
+
+          <article class="event" data-reveal>
+            <div class="poster" style="--poster:url('assets/posters/aarunya.webp')">
+              <img src="assets/posters/aarunya.webp" alt="Aarunya 2026 poster" loading="lazy" data-parallax-img>
+            </div>
+            
+          </article>
+
+          <article class="event" data-reveal>
+            <div class="poster" style="--poster:url('assets/posters/innovation-blitz.webp')">
+              <img src="assets/posters/innovation-blitz.webp" alt="Innovation Blitz 3.0 poster" loading="lazy" data-parallax-img>
+            </div>
+           
+          </article>
+
+          <article class="event" data-reveal>
+            <div class="poster" style="--poster:url('assets/posters/enigma.webp')">
+              <img src="assets/posters/enigma.webp" alt="Enigma x FUNTECH Carnival Games poster" loading="lazy" data-parallax-img>
+            </div>
+           
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOIN -->
+    <section class="section join" id="join">
+      <div class="join-bg" aria-hidden="true">
+        <video class="join-bg-video" autoplay muted loop playsinline preload="auto" poster="assets/video/join-bg-poster.jpg">
+          <source src="assets/video/join-bg.mp4" type="video/mp4">
+        </video>
+        <div class="join-bg-scrim"></div>
+      </div>
+      <div class="wrap join-grid">
+        <div class="join-info" data-reveal>
+          <h2 class="h2">Join FUNTECH</h2>
+          <p class="lead">No experience needed. Bring curiosity.</p>
+          <dl class="facts">
+            <div><dt>When</dt><dd id="factTime"></dd></div>
+            <div><dt>Where</dt><dd id="factVenue"></dd></div>
+          </dl>
+        </div>
+
+        <form class="form" id="joinForm" novalidate data-reveal>
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" autocomplete="name" placeholder="Your full name" required>
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" autocomplete="email" placeholder="you@example.com" required>
+          </label>
+          <label>
+            <span>Year of study</span>
+            <select name="year" required>
+              <option value="" disabled selected>Select your year</option>
+              <option>1st year</option>
+              <option>2nd year</option>
+              <option>3rd year</option>
+              <option>4th year</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <button class="cta cta-block" type="submit">Join FUNTECH</button>
+          <p class="form-note" id="formNote" role="status" aria-live="polite">Opens your email app with your details filled in.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-in">
+      <a class="footer-brand" href="#top">
+        <img src="assets/logo.png" alt="" width="44" height="44">
+        <span>Funtech Club</span>
+      </a>
+      <p>MITS Gwalior</p>
+      <a href="https://www.instagram.com/funtechclub.mits/?hl=en" target="_blank" rel="noopener">Instagram @funtechclubmits</a>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
