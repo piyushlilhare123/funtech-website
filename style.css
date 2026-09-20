@@ -130,8 +130,8 @@ body.ready .fly-logo { opacity: 1; transition: opacity 1.2s ease .2s; animation:
 
 /* ---------- Sticky corner logo (always visible, bottom-right) ---------- */
 .site-logo-fixed {
-  position: fixed; right: clamp(7rem, 3.5vw, 2.2rem); bottom: clamp(5rem, 3.5vw, 2.2rem);
-  z-index: 65; width: clamp(60px, 6vw, 60px); height: clamp(60px, 6vw, 60px);
+  position: fixed; right: clamp(7rem, 3.5vw, 2.2rem); bottom: clamp(3rem, 3.5vw, 2.2rem);
+  z-index: 9999; width: clamp(60px, 6vw, 60px); height: clamp(60px, 6vw, 60px);
   border-radius: 50%; display: block; opacity: 0; pointer-events: none;
   background: rgba(7, 7, 13, .55); backdrop-filter: blur(6px);
   box-shadow: 0 0 16px rgba(178, 75, 243, .45), 0 0 34px rgba(62, 216, 232, .2), 0 4px 18px rgba(0, 0, 0, .45);
